@@ -28,3 +28,5 @@ opencv 3.1, imutils, matplotlib, logging, sklearn
 Output csv and html files are named after the scheme "prefix_$num_part_$i.csv (or .html)". 
 * photo_$num_part_$i.html displays clustering result
 * time_$num_part_$i.html summarizes speaking sessions of speakers.
+
+You need [style.css](http://www.ccfux.url.tw/styles.css) to get the html files finely displayed.
