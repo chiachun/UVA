@@ -22,9 +22,9 @@ opencv 3.1, imutils, matplotlib, logging, sklearn
 ## Start UVA
 * Edit config.ini. to set path of inputs and outputs.
 * Turn on switches in run_uva.py
-* Start a pytohon shell execute the script by typing execfile('run_uva.py')
+* Start a python shell. Execute the script by typing execfile('run_uva.py')
 
 ## Outputs
 Output csv and html files are named after the scheme "prefix_$num_part_$i.csv (or .html)". 
-* photo_$num_part_$i.html display clustering result
+* photo_$num_part_$i.html displays clustering result
 * time_$num_part_$i.html summarizes speaking sessions of speakers.
