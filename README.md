@@ -1,4 +1,4 @@
-# UVA
+# UVA - Unsupervised Video Analysis
 
 ## Required model files
 You need to download these files and specify their path in your config.ini to run UVA.
@@ -25,4 +25,6 @@ opencv 3.1, imutils, matplotlib, logging, sklearn
 * Start a pytohon shell execute the script by typing execfile('run_uva.py')
 
 ## Outputs
-Output csv and html files are named after the rule "prefix_\$num_part_\$num.csv (or .html)"
+Output csv and html files are named after the scheme "prefix_$num_part_$i.csv (or .html)". 
+* photo_$num_part_$i.html display clustering result
+* time_$num_part_$i.html summarizes speaking sessions of speakers.
