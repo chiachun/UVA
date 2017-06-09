@@ -11,10 +11,10 @@ import logging
 # and inspect the intermediate products,
 # Note that every session needs results of previous sessions.
 
-READVIDEO = False
-SPLITFILM = False
-RUNCAFFE = False
-RUNCLF = True
+READVIDEO = False # Read film, detect faces and save them.
+SPLITFILM = False # Split film into smaller parts according to $gap_length given in config.ini file
+RUNCAFFE = False # Run forward pass of VGG16
+RUNCLF = True # Run classifier (built by pca/kmean/mean-shift)
 
 # Specify the path of configuration file
 configfile = "config.ini"
