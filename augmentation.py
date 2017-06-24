@@ -8,15 +8,15 @@
 import cv2
 from skimage.transform import AffineTransform
 from skimage.transform import warp
-
+import numpy as np
 def augmentation(photoname,label):
     img = cv2.imread(photoname)
     labels = []
-    zoom1s = [1.0]
-    zoom2s = [1.0]
-    rotations = [0,8]
-    shears = [3,12]
     images = []
+    zoom1s = [0.8,1.0,1.2]
+    zoom2s = [0.8,1.0,1.2]
+    rotations = [0,4,8,12]
+    shears = [3,6,9,12]
     flips = [False, True]
     for zoom1 in zoom1s:
         for zoom2 in zoom2s:
