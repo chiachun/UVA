@@ -129,7 +129,7 @@ def extract_feature(images, net, transformer, USE_IMAGES = False):
     return result
 
 
-def show_photos_(df,photo_dir, col1, outfile):
+def show_photos_(df,photo_dir, col1, outfile, USE_IMG_PATH=False):
     header1 ='<!DOCTYPE html> \n <html> \n <head> \n '
     header2 = '<link rel="stylesheet" href="styles.css"> \n </head> \n <body>'
     tailer ='</body> </html>'
@@ -146,8 +146,12 @@ def show_photos_(df,photo_dir, col1, outfile):
             for file1 in file1s:
                 f.write('<img alt="not found" src="%s" class="imgshow" />' %file1)
     else:
-        nums = df.number
-        file1s = [ "%s/%d.png" % (photo_dir,n) for n in nums]
+        file1s = list()
+	if IMG_PATH_COL_NAME:
+	    file1s = df[IMG_PATH_COL_NAME].tolist()
+        else:
+            nums = df.number
+            file1s = [ "%s/%d.png" % (photo_dir,n) for n in nums]
         for file1 in file1s:
             f.write('<img alt="not found" src="%s" class="imgshow" />' %file1)
     f.write(tailer)
