@@ -2,6 +2,7 @@ import numpy as np
 from sklearn.decomposition import PCA
 import pandas as pd
 import pickle
+from sklearn import preprocessing
 
 # Switching on PLOT will give you a plot of photos displayed on the first
 # and second principle compoenents. Switch off PLOT if dfin contains many photos.
@@ -11,7 +12,8 @@ PLOT = True
 
 dfin = pd.read_csv('csvs/fc7_000_part_0.csv',index_col=0)
 ftcols = ['%d' % i for i in range(0,4096)]  
-X = dfin[ftcols] 
+X = dfin[ftcols]
+X = preprocessing.scale(X)
 pca = PCA(n_components=50)
 pca.fit(X)
 print '%f percent of variance is explained ' % sum(pca.explained_variance_ratio_)
