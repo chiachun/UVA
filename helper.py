@@ -129,11 +129,7 @@ def extract_feature(images, net, transformer, USE_IMAGES = False):
     return result
 
 
-<<<<<<< HEAD
-def show_photos_(df,photo_dir, col1, outfile, USE_IMG_PATH=False):
-=======
 def show_photos_(df,photo_dir, col1, outfile, IMG_PATH_COL_NAME=None):
->>>>>>> correct typo
     header1 ='<!DOCTYPE html> \n <html> \n <head> \n '
     header2 = '<link rel="stylesheet" href="styles.css"> \n </head> \n <body>'
     tailer ='</body> </html>'
