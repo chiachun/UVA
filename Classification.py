@@ -3,6 +3,7 @@ import pandas as pd
 import sys
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
+from sklearn import preprocessing
 from sklearn.cluster import MeanShift, estimate_bandwidth
 import numpy as np
 from helper import show_photos, mean_shift
@@ -30,6 +31,7 @@ class Classification:
             print 'Treated as not being processed by skin_filter.'
             
         x = self.df[self.ftcols].as_matrix()
+        x = preprocessing.scale(x)
         xp = self.pca.transform(x)
         self.dfp = pd.DataFrame(xp)
         self.dfp[['number','time']] = self.df[['number','time']]
